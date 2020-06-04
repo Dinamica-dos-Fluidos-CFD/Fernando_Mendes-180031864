@@ -21,3 +21,6 @@ A finalidade do projeto é acadêmica, isto é, visa prover uma conhecimento ext
 
 ### Prazo do Projeto
 O projeto será dividido em 3 partes: Modelagem, Pré-Processamento e Processamento. Na etapa de Processamento está implicito a análise dos resultados obtido e de demais parâmetros inerentes as simulações de Dinâmica dos Fluidos. A estimativa inicial é que o projeto dure 3 semanas, sendo 1 semana para cada parte, no entanto, o prazo está sujeito à alterações devido a relevância dos feedbacks apresentados pelo professor após a conclusão de cada parte.
+
+### Metodologia
+Nesse contexto, a utilização de CFD disponta como uma estratégia a ser utilizada, pois permite mudanças ágeis e que não envolvem custos financeiros. Além disso, ao optar-se pela instalação de sensores, caso mal executada, pode ocasionar erros nas medições a serem realizadas. Portando, tendo em vista o cenário e as variáveis a serem estudadas nota-se que é a metodoliga mais adequada.
