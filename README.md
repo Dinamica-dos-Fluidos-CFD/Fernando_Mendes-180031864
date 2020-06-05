@@ -22,5 +22,22 @@ A finalidade do projeto é acadêmica, isto é, visa prover uma conhecimento ext
 ### Prazo do Projeto
 O projeto será dividido em 3 partes: Modelagem, Pré-Processamento e Processamento. Na etapa de Processamento está implicito a análise dos resultados obtido e de demais parâmetros inerentes as simulações de Dinâmica dos Fluidos. A estimativa inicial é que o projeto dure 3 semanas, sendo 1 semana para cada parte, no entanto, o prazo está sujeito à alterações devido a relevância dos feedbacks apresentados pelo professor após a conclusão de cada parte.
 
+### Hipóteses de Simplificação
+Antes de inicializar qualquer tipo de simulação é imprescindível atentar-se para o fenômeno físico em si visando avaliar quais hipóteses de simplificação podem ser aplicadas no cenário. Adotar ou não essa hipóteses está associado com a influência nos parâmetros a serem analisados, a precisão necessária nos resultados, o poder computacional envolvido, o tempo disponível para realização do estudo.
+
+Nesse projeto, tendo em vista as considerações acimas, algumas hipóteses podem ser adotadas como escoamento incompressível, laminar e plenamente desenvolvido, a rugosidade do material não afeta a perda de carga e não existem flanges. Nesse estudo, todas as hipóteses de simplificação citadas serão adotadas, porém cabe ressalva quanto a não influência do material na perda de carga. Portanto, caso os resultados não sejam condizentes com os experimentais encontrados deve-se refazer as simulações desconsiderando tal simplificação.
+
 ### Metodologia
 Nesse contexto, a utilização de CFD disponta como uma estratégia a ser utilizada, pois permite mudanças ágeis e que não envolvem custos financeiros. Além disso, ao optar-se pela instalação de sensores, caso mal executada, pode ocasionar erros nas medições a serem realizadas. Portando, tendo em vista o cenário e as variáveis a serem estudadas nota-se que é a metodoliga mais adequada.
+
+### Geometria
+A geometria a ser estudada será apresentada abaixo.
+![Teste](fig/isometric_view.png)
+<center>Figura 1 - Vista isométrica da geometria</center>
+
+![Teste](fig/side_view.png)
+<center>Figura 2 - Vista lateral da geometria</center>
+
+![Teste](fig/top_view.png)
+<center>Figura 3 - Vista forntal da geometria</center>
+
