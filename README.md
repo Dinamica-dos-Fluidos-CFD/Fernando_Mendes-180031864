@@ -14,7 +14,9 @@ O principal objetivo do projeto é realizar um estudo numérico de uma tubulaç�
 ##### Requisito #001: Vazão
 No contexto de dinâmica dos fluidos, é comum encontra-se os conceitos de vazão volumétrica e vazão mássica. Ambas estão correlacionadas a velocidade do escoamento do fluido, desse modo, da teoria do fluxo de Couette [[2]](https://en.wikipedia.org/wiki/Couette_flow) conclui-se a relação entre a tensão de cisalhamento e a velocidade, ilustrado na equação abaixo.
 
-<center>![equation](fig/eq_shear_stress.png)</center>
+<p align="center">
+  <img width="90" height="40" src="fig/eq_shear_stress.png">
+</p>
 
 ##### Requisito #002: Perda de Carga
 Ao fim da simulação é imprescindível ter o valor da perda de carga para possibilitar uma comparação com o valor experimental afim de determinar se o cenário estudado está coerente com o fenômeno físico esperado.
@@ -42,11 +44,15 @@ Nesse contexto, a utilização de CFD disponta como uma estratégia a ser utiliz
 ### Geometria
 A geometria a ser estudada será apresentada abaixo.
 ![Teste](fig/isometric_view.png)
-<center>Figura 1 - Vista isométrica da geometria</center>
+<center><b>Figura 1 - Vista isométrica da geometria</b></center>
 
 ![Teste](fig/side_view.png)
-<center>Figura 2 - Vista lateral da geometria</center>
+<center><b>Figura 2 - Vista lateral da geometria</b></center>
 
 ![Teste](fig/top_view.png)
-<center>Figura 3 - Vista forntal da geometria</center>
+<center><b>Figura 3 - Vista forntal da geometria</b></center>
+Além disso, o esquemático do problema será apresentado abaixo.
+
+![Teste](fig/schematics.png)
+<center><b>Figura 4 - Esquemático da geometria</b></center>
 
