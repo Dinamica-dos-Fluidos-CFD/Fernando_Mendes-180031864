@@ -43,16 +43,24 @@ Nesse contexto, a utilização de CFD disponta como uma estratégia a ser utiliz
 
 ### Geometria
 A geometria a ser estudada será apresentada abaixo.
-![Teste](fig/isometric_view.png)
+<p align="center">
+  <img width="450" height="300" src="fig/isometric_view.png">
+</p>
 <center><b>Figura 1 - Vista isométrica da geometria</b></center>
 
-![Teste](fig/side_view.png)
+<p align="center">
+  <img width="450" height="300" src="fig/side_view.png">
+</p>
 <center><b>Figura 2 - Vista lateral da geometria</b></center>
 
-![Teste](fig/top_view.png)
+<p align="center">
+  <img width="450" height="300" src="fig/top_view.png">
+</p>
 <center><b>Figura 3 - Vista forntal da geometria</b></center>
 Além disso, o esquemático do problema será apresentado abaixo.
 
-![Teste](fig/schematics.png)
+<p align="center">
+  <img width="380" height="120" src="fig/schematics.png">
+</p>
 <center><b>Figura 4 - Esquemático da geometria</b></center>
 
