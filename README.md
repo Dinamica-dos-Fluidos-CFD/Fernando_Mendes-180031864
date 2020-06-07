@@ -10,22 +10,22 @@ Problema 1: Uma instalação de bombeamento tem apresentado problemas em uma se�
 ## 1. Modelagem
 ### Objetivo do Projeto
 O principal objetivo do projeto é realizar um estudo numérico de uma tubulação aplicada no bombeamento de água. A ferramenta de simulação escolhida para a realização do estudo é o Ansys CFX, pois foi uma das apresentadas pelo professor da disciplina de Dinâmica dos Fluidos. Dessa forma, será possível confrontar os dados obtidos através dos sensores de pressão visando avaliar a coerência dos mesmos. Caso haja alguma divergência significativa, haverá uma discussão sobre pontos que podem explicar tal discrepância.
+
 ### Requisitos
-##### Requisito #01: Vazão
-No contexto de dinâmica dos fluidos, é comum encontrar-se os conceitos de vazão volumétrica e vazão mássica. Ambas estão correlacionadas a velocidade do escoamento do fluido, desse modo, da teoria do fluxo de Couette [[1]](https://en.wikipedia.org/wiki/Couette_flow) conclui-se a relação entre a tensão de cisalhamento e a velocidade, ilustrado na equação abaixo.
+##### Requisito #01: Determinar a vazão
+Obter o valor da vazão na saída do tubo para o cenário descrito no problema acima.
 
-<p align="center">
-  <img width="90" height="40" src="fig/eq_shear_stress.png">
-</p>
+##### Requisito #02: Determinar a perda de carga
+Obter o valor de perda de carga para o cenário descrito no problema acima.
 
-##### Requisito #02: Perda de Carga
-Ao fim da simulação é imprescindível ter o valor da perda de carga para possibilitar uma comparação com o valor experimental afim de determinar se o cenário estudado está coerente com o fenômeno físico esperado.
+##### Requisito #03: Análise dos resultados obtidos
+Após obter-se os resultados da simulação, é necessário avaliar se os valores estão coerentes com os valores medidos. Caso não estejam, serão apresentados provavéis motivos da discrepância entre o experimental e o simulado.
 
-##### Requisito #03: Tensão de Cisalhamento
-O estudo paramétrico visa avaliar o impacto das demais variáveis na tensão de cisalhamento.
+##### Requisito #04: Estudo paramétrico da tensão cisalhante
+Avaliar o impacto da variação da tensão cisalhante nas demais variáveis presentes no modelo computacional.
 
 ### Finalidade do Projeto
-A finalidade do projeto é acadêmica, isto é, visa prover uma conhecimento extra à disciplina de Dinâmica dos Fluidos por meio do uso da Dinâmica dos Fluidos Computacional (CFD). Essa é uma ferramenta oriunda da tecnologia de Engenharia Assistada por Computador (CAE) a qual possibilita da análise básica até sistemas complexos [[2]](https://www.esss.co/blog/qual-a-importancia-do-engenheiro-na-simulacao-computacional/). Desse modo, a técnica apresenta uma forma de simplificação de projetos amplamente difundida na academia e indústria. O profissional responsável pela realização dos estudos matemáticos é conhecido como Engenheiro de Simulação. 
+A finalidade do projeto é acadêmica, isto é, visa prover uma conhecimento extra à disciplina de Dinâmica dos Fluidos por meio do uso da Dinâmica dos Fluidos Computacional (CFD). Essa é uma ferramenta oriunda da tecnologia de Engenharia Assistada por Computador (CAE) a qual possibilita da análise básica até sistemas complexos [[1]](https://www.esss.co/blog/qual-a-importancia-do-engenheiro-na-simulacao-computacional/). Desse modo, a técnica apresenta uma forma de simplificação de projetos amplamente difundida na academia e indústria. O profissional responsável pela realização dos estudos matemáticos é conhecido como Engenheiro de Simulação. 
 
 ### Prazo do Projeto
 O projeto será dividido em 3 partes: Modelagem, Pré-Processamento e Processamento. Na etapa de Processamento está implicito a análise dos resultados obtido nas simulações. A estimativa inicial é que o projeto dure 3 semanas, sendo 1 semana para cada parte, no entanto, o prazo está sujeito à alterações devido a relevância dos feedbacks apresentados pelo professor após a conclusão de cada parte.
