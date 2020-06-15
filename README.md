@@ -58,27 +58,49 @@ Como mencionado anteriormente, a geometria a ser estudada representa a região d
 
 <p align="center">
   <a id="fig-schematics">
-  <img width="300" height="90" src="fig/schematics.png">
+  <img width="330" height="99" src="fig/schematics.png">
 </p>
 <p align=center><b>Figura 1 - Esquemático da geometria</b></p>
 
 <p align="center">
   <a id="fig-isometric">
-  <img width="300" height="200" src="fig/isometric_view.PNG">
+  <img width="330" height="220" src="fig/isometric_view.PNG">
 </p>
 <p align=center><b>Figura 2 - Vista isométrica da geometria</b></p>
 
 <p align="center">
   <a id="fig-side">
-  <img width="300" height="200" src="fig/side_view.PNG">
+  <img width="330" height="220" src="fig/side_view.PNG">
 </p>
 <p align=center><b>Figura 3 - Vista lateral da geometria</b></p>
 
 <p align="center">
   <a id="fig-top">
-  <img width="300" height="166" src="fig/top_view.PNG">
+  <img width="330" height="183" src="fig/top_view.PNG">
 </p>
 <p align=center><b>Figura 4 - Vista frontal da geometria</b></p>
 
 
+## 2. Pré-Processamento
+### Domínio de Cálculo
+O domínio de cálculo é essencial para a obtenção de resultados condizentes com a realidade, pois é a representação da região em que a simulação será realizada. Desse modo, é imprescindível que tal domínio tenha uma boa precisão visando representar fielmente particularidades da geometria a ser estudada. No contexto de CFD, a malha representa o domínio de cálculo, isto é, o numero e o tamanho das subdivisões está diretamente relacionado a precisão do cálculo. Portanto, o refinamento da malha é uma etapa bastante relevante e demorada, no geral, avalia-se a precisão do cálculo por meio da análise de convergência da malha e dos indicadores de qualidade obtidos pelo software, como Skewness e Orthogonal Quality.
 
+|   | Tamanho do Elemento (m) | Skewness Máximo (Médio) | Orthogonal Quality Mínimo (Médio) | Vazão (m^3 s^-1) | Perda de Carga (Pa) |
+|---|-------------------------|-------------------------|-----------------------------------|------------------|---------------------|
+| 1 | 9e-3                    | 0,38046 (0,24283)       | 0,90712 (0,96754)                 | 9,44963E-05      | 1,32482             |
+| 2 | 8e-3                    | 0,35696  (0,21308)      | 0,67941 (0,96602)                 | 9,21612E-05      | 1,53159             |
+| 3 | 7e-3                    | 0,43229  (0,26281)      | 0,65656 (0,94135)                 | 9,12663E-05      | 1,64314             |
+| 4 | 6e-3                    | 0,39218  (0,1707)       | 0,76694 (0,99761)                 | 9,8576E-05       | 2,13076             |
+| 5 | 5e-3                    | 0,43317  (0,22576)      | 0,67294 (0,95308)                 | 9,38992E-05      | 2,10196             |
+
+Com isso, tendo em vista a tabela acima, nota-se que para o quinto tamanho de elemento as variáveis obtidas da simulação apresentam pouca variação. Tal fato indica que o tamanho ideal de elemento foi encontrado e, além disso, que a geometria está condizente com a situação física. Por fim, optou-se por trabalhar com uma malha estruturada por exigir menos memória computacional e devido a geometria ser bastante simples.
+
+###Inputs
+##### Input #1: Velocidade
+O primeiro input da simulação é a velocidade do fluxo de água na tubulação. Desse modo, para determiná-la deve-se utilizar a equação da vazão volumétrica, vide <a href="#eq-velocity">Eq. 1</a>, tendo em vista a vazão volumétrica ao fim da tubulação.
+
+
+<p align="center">
+  <a id="eq-velocity">
+  <img width="65" height="45" src="fig/eq_velocity.PNG">
+</p>
