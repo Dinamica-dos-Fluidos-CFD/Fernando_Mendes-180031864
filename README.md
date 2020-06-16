@@ -57,25 +57,25 @@ Desse modo, para realizar a simulação será usado o software comercial Ansys W
 Como mencionado anteriormente, a geometria a ser estudada representa a região de escoamento plenamente desenvolvido que situa-se imediatamente ao comprimento de entrada, região caracterizada por um fluxo não uniforme, vide <a href="#fig-schematics">Fig. 1</a>. Em seguida,apresenta-se a geometria da tubulação construída no SpaceClaim, conforme as dimensões especificadas, nas <a href="#fig-isometric">Fig. 2</a>,<a href="#fig-side">Fig. 3</a> e <a href="#fig-top">Fig. 4</a>. 
 
 <p align="center">
-  <a id="fig-schematics">
+  <a id="fig-schematics"></a>
   <img width="330" height="99" src="fig/schematics.png">
 </p>
 <p align=center><b>Figura 1 - Esquemático da geometria</b></p>
 
 <p align="center">
-  <a id="fig-isometric">
+  <a id="fig-isometric"></a>
   <img width="330" height="220" src="fig/isometric_view.PNG">
 </p>
 <p align=center><b>Figura 2 - Vista isométrica da geometria</b></p>
 
 <p align="center">
-  <a id="fig-side">
+  <a id="fig-side"></a>
   <img width="330" height="220" src="fig/side_view.PNG">
 </p>
 <p align=center><b>Figura 3 - Vista lateral da geometria</b></p>
 
 <p align="center">
-  <a id="fig-top">
+  <a id="fig-top"></a>
   <img width="330" height="183" src="fig/top_view.PNG">
 </p>
 <p align=center><b>Figura 4 - Vista frontal da geometria</b></p>
@@ -100,30 +100,53 @@ Com isso, tendo em vista a tabela acima, nota-se que para o quinto tamanho de el
 
 ### Setup
 ##### Input #1: Fluido de Trabalho
-Logo ao abrir o Setup do CFX, o primeiro passo é configurar as opções no menu Default Domain, ou, em português, Domínio Padrão. Nele, o primeiro input necessário é o fluido de trabalho que, para essa simulação, será água, cujas propriedades já constam na biblioteca do Ansys. A <a href="#input_fluid">Fig. 5</a> ilustra
+Logo ao abrir o setup do CFX, o primeiro passo é configurar as opções no menu Default Domain, ou, em português, Domínio Padrão. Nele, o primeiro input necessário é o fluido de trabalho que, para essa simulação, será água, cujas propriedades já constam na biblioteca do Ansys. A <a href="#input_fluid">Fig. 5</a> ilustra essa configuração.
+
 <p align="center">
-  <a id="input_fluid">
+  <a id="input_fluid"></a>
   <img width="310" height="170" src="fig/input_fluid.png">
 </p>
 <p align=center><b>Figura 5 - Configuração do fluido</b></p>
 
 ##### Input #2: Modelos do Domínio
-
+Após o primeiro input, deve-se configurar a pressão de referência, 1 atm, e desativar o modelo de flutuabilidade, pois a simulação não considerará os efeitos da gravidade no escoamento. As demais opções serão mantidas conforme o padrão do CFX-Pré.
 <p align="center">
-  <a id="input_domains">
+  <a id="input_domains"></a>
   <img width="310" height="170" src="fig/input_domains.png">
 </p>
 <p align=center><b>Figura 6 - Configuração de propriedades do domínio</b></p>
 
-##### Input #5: Velocidade do Escoamento
-O primeiro input da simulação é a velocidade do fluxo de água na tubulação. Desse modo, para determiná-la deve-se utilizar a equação da vazão volumétrica, vide <a href="#eq-velocity">Eq. 1</a>, tendo em vista a vazão volumétrica ao fim da tubulação.
-
+##### Input #3: Modelos do Fluido
+Está seção é considerada uma das mais importantes para obter-se uma simulação condizente com a realidade física esperada. Tamanha relevância está diretamente associada as hipóteses de simplificação adotadas anteriormente. Como mostrado na <a href="#input_fluid_models">Fig. 7</a>, a temperatura será mantida constante em 25 °C e não haverá modelo de turbulência.
 
 <p align="center">
-  <a id="eq-velocity">
+  <a id="input_fluid_models"></a>
+  <img width="310" height="170" src="fig/input_fluid_models.png">
+</p>
+<p align=center><b>Figura 7 - Configuração de propriedades do escoamento</b></p>
+
+##### Input #4: Velocidade do Escoamento
+O próximo passo necessário é configurar a velocidade do escoamento no software. Logo, para determiná-la deve-se utilizar a equação da vazão volumétrica tendo em vista o valor da vazão volumétrica na saída do tubo descrita pelo problema.
+
+<p align="center">
+  <a id="eq-velocity"></a>
   <img width="50" height="35" src="fig/eq_velocity.png">
 </p>
+<p align=center><b>Equação 1 - Velocidade do escoamento</b></p>
 
-#### Input #2: Pressão na saída
+Então, da <a href="#eq-velocity">Eq. 1</a>, a velocidade usada para simulação será de 0.08 m/s. Tendo em mente a necessidade do estudo paramétrico da Tensão Cisalhante na parede do tubo, essa velocidade foi definida como um parâmetro de entrada, com valor inicial mencionado acima, denominado "flowVel", conforme mostrado pela <a href="#eq-velocity">Fig. 8</a>.
 
-Dentro do setup do Ansys CFX é possível configurar a pressão na sáida do domínio de cálculo, nesse caso, no fim do tubo, relativa a pressão na entrada de forma a facilitar o cálculo da perda de carga. Desse modo, ao atribuir o valor de 0 Pa a essa pressão, o valor calculado pelo software, naquele local, já será a queda de pressão na tubulação.
+<p align="center">
+  <a id="input_fluid_models"></a>
+  <img width="350" height="130" src="fig/input_speed.png">
+</p>
+<p align=center><b>Figura 8 - Velocidade do escoamento</b></p>
+
+#### Input #5: Pressão na saída
+Por fim, dentro do setup do Ansys CFX, é possível configurar a pressão na sáida do tubo relativa a pressão na entrada de forma a facilitar o cálculo da perda de carga. Portanto, ao atribuir o valor de 0 Pa o valor calculado pelo software, naquele local, já será a queda de pressão na tubulação.
+
+<p align="center">
+  <a id="input_fluid_models"></a>
+  <img width="350" height="130" src="fig/input_outlet_pressure.png">
+</p>
+<p align=center><b>Figura 9 - Pressão relativa na saída</b></p>
