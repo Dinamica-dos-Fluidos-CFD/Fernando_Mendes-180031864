@@ -81,8 +81,11 @@ Como mencionado anteriormente, a geometria a ser estudada representa a região d
 <p align=center><b>Figura 4 - Vista frontal da geometria</b></p>
 
 
+
 ## 2. Pré-Processamento
+
 ### Domínio de Cálculo
+
 O domínio de cálculo é essencial para a obtenção de resultados condizentes com a realidade, pois é a representação da região em que a simulação será realizada. Desse modo, é imprescindível que tal domínio tenha uma boa precisão visando representar fielmente particularidades da geometria a ser estudada. No contexto de CFD, a malha representa o domínio de cálculo, isto é, o numero e o tamanho das subdivisões está diretamente relacionado a precisão do cálculo. Portanto, o refinamento da malha é uma etapa bastante relevante e demorada, no geral, avalia-se a precisão do cálculo por meio da análise de convergência da malha e dos indicadores de qualidade obtidos pelo software, como Skewness e Orthogonal Quality.
 
 |   | Tamanho do Elemento (m) | Skewness Máximo (Médio) | Orthogonal Quality Mínimo (Médio) | Vazão (m^3 s^-1) | Perda de Carga (Pa) |
@@ -95,12 +98,32 @@ O domínio de cálculo é essencial para a obtenção de resultados condizentes 
 
 Com isso, tendo em vista a tabela acima, nota-se que para o quinto tamanho de elemento as variáveis obtidas da simulação apresentam pouca variação. Tal fato indica que o tamanho ideal de elemento foi encontrado e, além disso, que a geometria está condizente com a situação física. Por fim, optou-se por trabalhar com uma malha estruturada por exigir menos memória computacional e devido a geometria ser bastante simples.
 
-###Inputs
-##### Input #1: Velocidade
+### Setup
+##### Input #1: Fluido de Trabalho
+Logo ao abrir o Setup do CFX, o primeiro passo é configurar as opções no menu Default Domain, ou, em português, Domínio Padrão. Nele, o primeiro input necessário é o fluido de trabalho que, para essa simulação, será água, cujas propriedades já constam na biblioteca do Ansys. A <a href="#input_fluid">Fig. 5</a> ilustra
+<p align="center">
+  <a id="input_fluid">
+  <img width="310" height="170" src="fig/input_fluid.png">
+</p>
+<p align=center><b>Figura 5 - Configuração do fluido</b></p>
+
+##### Input #2: Modelos do Domínio
+
+<p align="center">
+  <a id="input_domains">
+  <img width="310" height="170" src="fig/input_domains.png">
+</p>
+<p align=center><b>Figura 6 - Configuração de propriedades do domínio</b></p>
+
+##### Input #5: Velocidade do Escoamento
 O primeiro input da simulação é a velocidade do fluxo de água na tubulação. Desse modo, para determiná-la deve-se utilizar a equação da vazão volumétrica, vide <a href="#eq-velocity">Eq. 1</a>, tendo em vista a vazão volumétrica ao fim da tubulação.
 
 
 <p align="center">
   <a id="eq-velocity">
-  <img width="65" height="45" src="fig/eq_velocity.PNG">
+  <img width="50" height="35" src="fig/eq_velocity.png">
 </p>
+
+#### Input #2: Pressão na saída
+
+Dentro do setup do Ansys CFX é possível configurar a pressão na sáida do domínio de cálculo, nesse caso, no fim do tubo, relativa a pressão na entrada de forma a facilitar o cálculo da perda de carga. Desse modo, ao atribuir o valor de 0 Pa a essa pressão, o valor calculado pelo software, naquele local, já será a queda de pressão na tubulação.
