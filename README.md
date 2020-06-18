@@ -138,7 +138,7 @@ Então, da <a href="#eq-velocity">Eq. 1</a>, a velocidade usada para simulação
 
 <p align="center">
   <a id="input_fluid_models"></a>
-  <img width="350" height="130" src="fig/input_speed.png">
+  <img width="330" height="135" src="fig/input_speed.png">
 </p>
 <p align=center><b>Figura 8 - Velocidade do escoamento</b></p>
 
@@ -147,6 +147,16 @@ Por fim, dentro do setup do Ansys CFX, é possível configurar a pressão na sá
 
 <p align="center">
   <a id="input_fluid_models"></a>
-  <img width="350" height="130" src="fig/input_outlet_pressure.png">
+  <img width="330" height="135" src="fig/input_outlet_pressure.png">
 </p>
 <p align=center><b>Figura 9 - Pressão relativa na saída</b></p>
+
+
+### Capacidade Computacional
+O poder de processamento é algo preponderante para os prazos de estudo numérico computacional de dinâmica dos fluidos, portanto, nesse contexto, em grandes projetos é comum usar-se clusters, comumente conhecidos como supercomputadores. No entanto, para esse projeto não se dispõe de tamanha capacidade computacional, a configuração do computador utilizado está descrita na tabela abaixo.
+
+| Item | Especificação |
+| ---- | ------------- |
+| Processador | Intel® Core™ i5-8250U 1.6 GHz |
+| RAM | 8GB DDR4 1200 MHz |
+| Placa de Vídeo | GeForce MX 150 |
