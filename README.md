@@ -92,7 +92,7 @@ Com isso,a malha utilizada foi construída iterativamente, isto é foram variado
 
 <p align="center">
   <a id="fig-malha"></a>
-  <img width="330" height="183" src="fig/mesh.PNG">
+  <img width="330" height="183" src="fig/mesh.png">
 </p>
 <p align=center><b>Figura 5 - Malha de cálculo</b></p>
 
@@ -101,13 +101,13 @@ Na etapa de modelagem, adotou-se o escoamento laminar como hipótese de simplifi
 
 <p align="center">
   <a id="fig-pvelocity"></a>
-  <img width="350" height="200" src="fig/laminar_velocity.PNG">
+  <img width="350" height="200" src="fig/laminar_velocity.png">
 </p>
 <p align=center><b>Figura 6 - Perfil de velocidade</b></p>
 
 <p align="center">
   <a id="fig-lvalues"></a>
-  <img width="330" height="100" src="fig/laminar_values.PNG">
+  <img width="330" height="100" src="fig/laminar_values.png">
 </p>
 <p align=center><b>Figura 7 - Malha de cálculo</b></p>
 
@@ -185,7 +185,7 @@ Após o primeiro teste com o setup descrito acima, a queda de pressão estava re
 
 <p align="center">
   <a id="fig-lvalues"></a>
-  <img width="330" height="100" src="fig/parametric_error.PNG">
+  <img width="330" height="100" src="fig/parametric_error.png">
 </p>
 <p align=center><b>Figura 13 - Estudo paramétrico do residual target</b></p>
 
