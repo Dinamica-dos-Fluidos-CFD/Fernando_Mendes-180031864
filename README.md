@@ -115,7 +115,7 @@ Como mostrado na <a href="#fig-pvelocity">Fig. 6</a>, o perfil de velocidade nã
 
 ### Setup
 
-Visando determinar, com base na teoria descrita em (ÇENGEL), os valores da velocidade do escoamento, do número de Reynolds e da queda de pressão foi desenvolvido um código em Python a partir da vazão volumétrica informada pelo problema e das dimensões do tubo. Além disso, o fator de atrito f teve o valor estimado em 0.042 utilizando o diagrama de Moody.
+Visando determinar, com base na teoria descrita em [[2]](https://books.google.com.br/books/about/Fluid_Mechanics.html?id=c8ATbn9ChB8C&redir_esc=y), os valores da velocidade do escoamento, do número de Reynolds e da queda de pressão foi desenvolvido um código em Python a partir da vazão volumétrica informada pelo problema e das dimensões do tubo. Além disso, o fator de atrito f teve o valor estimado em 0.042 utilizando o diagrama de Moody.
 
 <a id="tab-codigo"></a>
 | Variável | Valor Teórico|
@@ -126,7 +126,7 @@ Visando determinar, com base na teoria descrita em (ÇENGEL), os valores da velo
 
 <p align=center><b>Tabela 1 - Resultados obtidos pelo código</b></p>
 
-Com esse código confirmou-se que para a vazão volumétrica informada, o escoamento encontra-se na região de transição, pois o Reynolds está entre 2300 e 4000. Logo, a hipótese de escoamento laminar previamente adotada foi refutada e um modelo de turbulência precisará ser definido. Portanto, com base no discutido em [[2]](https://www.researchgate.net/post/what_is_the_difference_between_k_epsilon_and_k_omega_models_in_CFD_and_how_does_it_affect_flow_in_a_shell_and_tube_heat_exchanger), optou-se por utilizar o modelo de turbulência k-epsilon, pois é o utilizado em algumas aplicações industriais em baixos Reynolds.
+Com esse código confirmou-se que para a vazão volumétrica informada, o escoamento encontra-se na região de transição, pois o Reynolds está entre 2300 e 4000. Logo, a hipótese de escoamento laminar previamente adotada foi refutada e um modelo de turbulência precisará ser definido. Portanto, com base no discutido em [[3]](https://www.researchgate.net/post/what_is_the_difference_between_k_epsilon_and_k_omega_models_in_CFD_and_how_does_it_affect_flow_in_a_shell_and_tube_heat_exchanger), optou-se por utilizar o modelo de turbulência k-epsilon, pois é o utilizado em algumas aplicações industriais em baixos Reynolds.
 
 ##### Input #1: Fluido de Trabalho
 Logo ao abrir o setup do CFX, o primeiro passo é configurar as opções no menu Default Domain, ou, em português, Domínio Padrão. Nele, o primeiro input necessário é o fluido de trabalho que, para essa simulação, será água, cujas propriedades já constam na biblioteca do Ansys. A <a href="#input_fluid">Fig. 8</a> ilustra essa configuração.
