@@ -99,6 +99,20 @@ O domínio de cálculo é essencial para a obtenção de resultados condizentes 
 Com isso, tendo em vista a tabela acima, nota-se que para o quinto tamanho de elemento as variáveis obtidas da simulação apresentam pouca variação. Tal fato indica que o tamanho ideal de elemento foi encontrado e, além disso, que a geometria está condizente com a situação física. Por fim, optou-se por trabalhar com uma malha estruturada por exigir menos memória computacional e devido a geometria ser bastante simples.
 
 ### Setup
+
+Visando determinar, com base na teoria descrita em (ÇENGEL), os valores da velocidade do escoamento, do número de Reynolds e da queda de pressão foi desenvolvido um código em Python a partir da vazão volumétrica informada pelo problema e das dimensões do tubo. 
+
+<a id="tab-codigo"></a>
+| Variável | Valor Teórico|
+| -------- | -------------|
+|Velocidade do escoamento (m/s) | 0.0795|
+|Reynolds | 3565.8 |
+|Queda de pressão (Pa) | 3.31|  
+
+<p align=center><b>Tabela 1 - Resultados obtidos pelo código</b></p>
+
+Com esse código notou-se que para a vazão volumétrica informada, o escoamento encontra-se na região de transição, pois o Reynolds está entre 2300 e 4000. Logo, a hipótese de escoamento previamente laminar previamente adotada foi refutada e algum modelo de turbulência precisará ser adotado. Portanto, com base no discutido em [[2]](https://www.researchgate.net/post/what_is_the_difference_between_k_epsilon_and_k_omega_models_in_CFD_and_how_does_it_affect_flow_in_a_shell_and_tube_heat_exchanger), optou-se por utilizar o modelo de turbulência k-epsilon.
+
 ##### Input #1: Fluido de Trabalho
 Logo ao abrir o setup do CFX, o primeiro passo é configurar as opções no menu Default Domain, ou, em português, Domínio Padrão. Nele, o primeiro input necessário é o fluido de trabalho que, para essa simulação, será água, cujas propriedades já constam na biblioteca do Ansys. A <a href="#input_fluid">Fig. 5</a> ilustra essa configuração.
 
@@ -117,7 +131,7 @@ Após o primeiro input, deve-se configurar a pressão de referência, 1 atm, e d
 <p align=center><b>Figura 6 - Configuração de propriedades do domínio</b></p>
 
 ##### Input #3: Modelos do Fluido
-Está seção é considerada uma das mais importantes para obter-se uma simulação condizente com a realidade física esperada. Tamanha relevância está diretamente associada as hipóteses de simplificação adotadas anteriormente. Como mostrado na <a href="#input_fluid_models">Fig. 7</a>, a temperatura será mantida constante em 25 °C e não haverá modelo de turbulência.
+Está seção é considerada uma das mais importantes para obter-se uma simulação condizente com a realidade física esperada. Tamanha relevância está diretamente associada as hipóteses de simplificação adotadas anteriormente. Como mostrado na <a href="#input_fluid_models">Fig. 7</a>, a temperatura será mantida constante em 25 °C e o modelo k-epsilon será mantido em suas configurações padrão.
 
 <p align="center">
   <a id="input_fluid_models"></a>
@@ -134,7 +148,7 @@ O próximo passo necessário é configurar a velocidade do escoamento no softwar
 </p>
 <p align=center><b>Equação 1 - Velocidade do escoamento</b></p>
 
-Então, da <a href="#eq-velocity">Eq. 1</a>, a velocidade usada para simulação será de 0.08 m/s. Tendo em mente a necessidade do estudo paramétrico da Tensão Cisalhante na parede do tubo, essa velocidade foi definida como um parâmetro de entrada, com valor inicial mencionado acima, denominado "flowVel", conforme mostrado pela <a href="#eq-velocity">Fig. 8</a>.
+Então, da <a href="#eq-velocity">Eq. 1</a>, a velocidade usada, apresentada na  <a href="#tab-codigo">Tabela 1</a>,para simulação será de 0.0795 m/s. Tendo em mente a necessidade do estudo paramétrico da Tensão Cisalhante na parede do tubo, essa velocidade foi definida como um parâmetro de entrada, com valor inicial mencionado acima, denominado "flowVel", conforme mostrado pela <a href="#eq-velocity">Fig. 8</a>.
 
 <p align="center">
   <a id="input_fluid_models"></a>
@@ -158,5 +172,5 @@ O poder de processamento é algo preponderante para os prazos de estudo numéric
 | Item | Especificação |
 | ---- | ------------- |
 | Processador | Intel® Core™ i5-8250U 1.6 GHz |
-| RAM | 8GB DDR4 1200 MHz |
+| RAM | 8GB DDR4 2133 MHz |
 | Placa de Vídeo | GeForce MX 150 |
