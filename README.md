@@ -92,7 +92,7 @@ Por trata-se de uma análise inicial será utilizada a malha padrão do Ansys, g
 
 <p align="center">
   <a id="fig-malha"></a>
-  <img width="330" height="183" src="fig/mesh.PNG">
+  <img width="330" height="183" src="fig/mesh.png">
 </p>
 <p align=center><b>Figura 5 - Malha de cálculo</b></p>
 
