@@ -163,3 +163,17 @@ O poder de processamento é algo preponderante para os prazos de estudo numéric
 | Placa de Vídeo | GeForce MX 150 |
 
 Por fim, está previsto o prazo de 1 semana para a realização e avaliação das simulações feitas na etapa de processamento.
+
+## 3. Processamento
+
+O primeiro passo do processamento é a análise do histórico de convergência da solução. Nesta simulação, conforme <a href="#iresiduals">Fig. 11</a>, o histórico de convergência do cálculo está adequado, porém,  as últimas iterações apresentaram um comportamento inesperado.
+
+Logo, tal fato indica uma ressalva quanto aos resultados quantitativos, pois o patamar resíduos RMS de 10e-4, em CFD, é tido como vagamente convergente [[4]](https://www.engineering.com/DesignSoftware/DesignSoftwareArticles/ArticleID/9296/3-Criteria-for-Assessing-CFD-Convergence.aspx). Portanto, para obtenção de resultados quantitativos, é imprescindível o reprocessamento da solução utilizando um patamar de resíduos menor.
+
+<p align="center">
+  <a id="residuals"></a>
+  <img width="330" height="250" src="fig/residual.png">
+</p>
+<p align=center><b>Figura 11 - Gráfico da evolução dos resíduos</b></p>
+
+Embora não seja capaz de fornecer resultados quantitativos de maneira confiável, esta simulação é capaz de prover uma análise qualitativa do fenômento físico. Utilizando o recurso de paralelização, a solução está levando 50 segundos para atingir a convergência. 
