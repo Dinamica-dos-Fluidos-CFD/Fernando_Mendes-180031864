@@ -18,4 +18,4 @@ pressure_loss = f*tube_length*density*avg_velocity*avg_velocity/(2*tube_diam)
 #print
 print("Velocidade = {0} m/s".format(avg_velocity))
 print("Reynolds = {0}".format(reynolds))
-print("Queda de pressão = {0} Pa".format(pressure_loss))
+print("Queda de pressão = {0} Pa".format(pressure_loss_laminar))

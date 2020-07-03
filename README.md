@@ -218,3 +218,13 @@ Utilizando a linguagem Python, calculou-se a queda de pressão teórica para o c
 | Variável | Fornecido | Teórico Laminar | Teórico Transição |
 | -------- | --------- | --------------- | ----------------- |
 | Queda de Pressão  | 2 Pa | 1.41 Pa | 3.31 Pa |
+
+### Estudo Paramétrico
+
+Além disso, foi conduzido um estudo paramétrico com as dimensões da tubulação, onde radius representa o raio e len representa o incremento ao tamanho inicial de 1000 mm, visando melhor entender o comportamento da queda de pressão. Porém, ao fim da análise, concluiu-se que a tubulação apresenta algum problema, pois os valores não são condizentes.
+
+<p align="center">
+  <a id="parametric_study"></a>
+  <img width="330" height="130" src="fig/parametric_study.png">
+</p>
+<p align=center><b>Figura 16 - Estudo paramétrico</b></p>
