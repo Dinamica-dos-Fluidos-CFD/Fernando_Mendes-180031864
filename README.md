@@ -166,7 +166,7 @@ Por fim, está previsto o prazo de 1 semana para a realização e avaliação da
 
 ## 3. Processamento
 
-O primeiro passo do processamento é a análise do histórico de convergência da solução. Nesta simulação, conforme <a href="#iresiduals">Fig. 11</a>, o histórico de convergência do cálculo está adequado, porém,  as últimas iterações apresentaram um comportamento inesperado.
+O primeiro passo do processamento é a análise do histórico de convergência da solução. Nesta simulação, conforme <a href="#residuals">Fig. 11</a>, o histórico de convergência do cálculo está adequado, porém,  as últimas iterações apresentaram um comportamento inesperado.
 
 Logo, tal fato indica uma ressalva quanto aos resultados quantitativos, pois o patamar resíduos RMS de 10e-4, em CFD, é tido como vagamente convergente [[4]](https://www.engineering.com/DesignSoftware/DesignSoftwareArticles/ArticleID/9296/3-Criteria-for-Assessing-CFD-Convergence.aspx). Portanto, para obtenção de resultados quantitativos, é imprescindível o reprocessamento da solução utilizando um patamar de resíduos menor.
 
@@ -177,3 +177,44 @@ Logo, tal fato indica uma ressalva quanto aos resultados quantitativos, pois o p
 <p align=center><b>Figura 11 - Gráfico da evolução dos resíduos</b></p>
 
 Embora não seja capaz de fornecer resultados quantitativos de maneira confiável, esta simulação é capaz de prover uma análise qualitativa do fenômento físico. Utilizando o recurso de paralelização, a solução está levando 50 segundos para atingir a convergência. 
+
+## 4. Pós-Processamento
+Ao fim da simulação, as seguintes variáveis foram calculadas: número de Reynolds do escoamento, vazão volumétrica, queda de pressão e tensão cisalhante na parede da tubulação. Desse modo, os valores serão apresentados na tabela abaixo.
+
+|Reynolds do Escoamento| Vazão volumétrica (m³/s) | Queda de Pressão (Pa)| Tensão Cisalhante (Pa)|
+| --- | ---- | ---- | ----| 
+| 3573 | 9.95e-5 | 1.432 | 0.0143 |
+
+Com isso, segundo descrito em (Çengel), escoamentos com Reynolds maior ou igual a 2300 já são considerados em regime de transição entre laminar e turbulento. Portanto, o tipo de processamento utilizado não é condizente com a realidade física estudada. Logo, os resultados não estão de acordo com a realidade física do escoamento e nem com os dados mensurados pelo problema. 
+
+<p align="center">
+  <a id="velocity_contour"></a>
+  <img width="330" height="170" src="fig/velocity_contour.png">
+</p>
+<p align=center><b>Figura 12 - Contorno de velocidade</b></p>
+
+<p align="center">
+  <a id="pressure_contour"></a>
+  <img width="330" height="170" src="fig/pressure_contour.png">
+</p>
+<p align=center><b>Figura 13 - Contorno de pressão</b></p>
+
+Na <a href="#velocity_contour">Fig. 12</a> é possível observar que o escoamento encontra-se plenamente desenvolvido antes da metade da tubulação. Desse modo, no contexto de ecoamento laminar, o perfil de velocidade nessa região é dado por uma parábola, porém, tal fato não é verificado, vide <a href="#velocity_profile">Fig. 14</a>.
+
+<p align="center">
+  <a id="velocity_profile"></a>
+  <img width="330" height="230" src="fig/velocity_profile.png">
+</p>
+<p align=center><b>Figura 14 - Perfil de velocidade no meio da tubulação</b></p>
+
+<p align="center">
+  <a id="pressure_loss"></a>
+  <img width="330" height="230" src="fig/pressure_loss.png">
+</p>
+<p align=center><b>Figura 15 - Queda de pressão ao longo da tubulação</b></p>
+
+Utilizando a linguagem Python, calculou-se a queda de pressão teórica para o caso que está sendo estudado. No regime de transição, o fator de atrito foi estimado em f = 0.042 usando o Diagrama de Moody. Desse modo, os valores obtidos serão ilustrados na tabela abaixo.
+
+| Variável | Fornecido | Teórico Laminar | Teórico Transição |
+| -------- | --------- | --------------- | ----------------- |
+| Queda de Pressão  | 2 Pa | 1.41 Pa | 3.31 Pa |
