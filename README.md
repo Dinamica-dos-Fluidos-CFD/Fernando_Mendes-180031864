@@ -185,7 +185,6 @@ Ao fim da simulação, as seguintes variáveis foram calculadas: número de Reyn
 | --- | ---- | ---- | ----| 
 | 3573 | 9.95e-5 | 1.432 | 0.0143 |
 
-Com isso, segundo descrito em (Çengel), escoamentos com Reynolds maior ou igual a 2300 já são considerados em regime de transição entre laminar e turbulento. Portanto, o tipo de processamento utilizado não é condizente com a realidade física estudada. Logo, os resultados não estão de acordo com a realidade física do escoamento e nem com os dados mensurados pelo problema. 
 
 <p align="center">
   <a id="velocity_contour"></a>
@@ -228,3 +227,5 @@ Além disso, foi conduzido um estudo paramétrico com as dimensões da tubulaç�
   <img width="330" height="130" src="fig/parametric_study.png">
 </p>
 <p align=center><b>Figura 16 - Estudo paramétrico</b></p>
+
+Com isso, segundo descrito em (Çengel), escoamentos com Reynolds maior ou igual a 2300 já são considerados em regime de transição entre laminar e turbulento. Portanto, o tipo de processamento utilizado não é condizente com a realidade física estudada. Logo, os resultados apresentados não estão de acordo com a teoria deste escoamento e nem com os dados mensurados pelo problema. 
