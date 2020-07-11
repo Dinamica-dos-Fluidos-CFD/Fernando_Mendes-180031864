@@ -229,3 +229,43 @@ Além disso, foi conduzido um estudo paramétrico com as dimensões da tubulaç�
 <p align=center><b>Figura 16 - Estudo paramétrico</b></p>
 
 Com isso, segundo descrito em (Çengel), escoamentos com Reynolds maior ou igual a 2300 já são considerados em regime de transição entre laminar e turbulento. Portanto, o tipo de processamento utilizado não é condizente com a realidade física estudada. Logo, os resultados apresentados não estão de acordo com a teoria deste escoamento e nem com os dados mensurados pelo problema. 
+
+
+## 5. Pós-Processamento Turbulento
+
+Como dito anteriormente, o escoamento encontra-se na região de transição entre laminar e turbulento, portanto é necessário a realização da análise adotando um modelo de turbulência. Para esta simulação haverá apenas duas alterações nos inputs descritos acima: modelo de turbulência k-epsilon e o patamar de resíduos convergidos em 10e-6.
+
+Logo, os resultados obtidos nessa nova iteração da solução serão apresentados abaixo.
+
+|Reynolds do Escoamento| Vazão volumétrica (m³/s) | Queda de Pressão (Pa)| Tensão Cisalhante (Pa)|
+| --- | ---- | ---- | ----| 
+| 3608 | 0.00010 | 3.10129 | 0.02918 |
+
+
+<p align="center">
+  <a id="velocity_contour_turbulent"></a>
+  <img width="330" height="170" src="fig/velocity_contour_turbulent.png">
+</p>
+<p align=center><b>Figura 17 - Contorno de velocidade</b></p>
+
+<p align="center">
+  <a id="pressure_contour_turbulent"></a>
+  <img width="330" height="170" src="fig/pressure_contour_turbulent.png">
+</p>
+<p align=center><b>Figura 18 - Contorno de pressão</b></p>
+
+
+<p align="center">
+  <a id="velocity_profile_turbulent"></a>
+  <img width="330" height="230" src="fig/velocity_profile_turbulent.png">
+</p>
+<p align=center><b>Figura 19 - Perfil de velocidade no meio da tubulação</b></p>
+
+<p align="center">
+  <a id="pressure_loss_turbulent"></a>
+  <img width="330" height="230" src="fig/pressure_loss_turbulent.png">
+</p>
+<p align=center><b>Figura 20 - Queda de pressão ao longo da tubulação</b></p>
+
+Como demonstrado acima, os resultados apresentado fazendo uso do modelo de turbulência são capazes de prover uma análise tanto qualitativa quanto quantitativa. Segundo o dado teórico calculado para a queda de pressão, a taxa de erro foi de 9,4%, a qual é plenamente aceitável para um projeto de CFD em sua segunda iteração. Desse modo, caso haja necessidade de melhorar a precisão do cálculo, é possível aprimorar a malha de cálculo utilizada.
+
