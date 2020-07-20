@@ -233,7 +233,7 @@ Com isso, segundo descrito em (Çengel), escoamentos com Reynolds maior ou igual
 
 ## 5. Pós-Processamento Turbulento
 
-Como dito anteriormente, o escoamento encontra-se na região de transição entre laminar e turbulento, portanto é necessário a realização da análise adotando um modelo de turbulência. Para esta simulação haverá apenas duas alterações nos inputs descritos acima: modelo de turbulência k-epsilon e o patamar de resíduos convergidos em 10e-6.
+Como dito anteriormente, o escoamento encontra-se na região de transição entre laminar e turbulento, portanto, é necessária a realização da análise adotando um modelo de turbulência. Para esta simulação haverá apenas duas alterações nos inputs descritos acima: modelo de turbulência k-epsilon e o patamar de resíduos convergidos em 10e-6.
 
 Logo, os resultados obtidos nessa nova iteração da solução serão apresentados abaixo.
 
@@ -267,5 +267,8 @@ Logo, os resultados obtidos nessa nova iteração da solução serão apresentad
 </p>
 <p align=center><b>Figura 20 - Queda de pressão ao longo da tubulação</b></p>
 
-Como demonstrado acima, os resultados apresentado fazendo uso do modelo de turbulência são capazes de prover uma análise tanto qualitativa quanto quantitativa. Segundo o dado teórico calculado para a queda de pressão, a taxa de erro foi de 9,4%, a qual é plenamente aceitável para um projeto de CFD em sua segunda iteração. Desse modo, caso haja necessidade de melhorar a precisão do cálculo, é possível aprimorar a malha de cálculo utilizada.
+Como demonstrado acima, os resultados apresentados fazendo uso do modelo de turbulência são capazes de prover uma análise tanto qualitativa quanto quantitativa. Segundo o dado teórico calculado para a queda de pressão, a taxa de erro foi de 9,4%, a qual é plenamente aceitável para um projeto de CFD em sua segunda iteração. Desse modo, caso haja necessidade de melhorar a precisão do cálculo, é possível aprimorar a malha de cálculo utilizada.
 
+## 6. Conclusão
+
+Desse modo, foi realizado um estudo numérico de uma tubulação aplicada no bombeamento de água utilizando o código comercial Ansys CFX. Ao comparar-se os valores téoricos e numéricos com os dados experimentais do problema é possível notar uma grande discrepância nos valores da queda de pressão. Logo, conclui-se que existem erros nas dimensões da tubulação ou nas medições apresentadas para notear a análise numérica. Por fim, a simulação númerica permitiu uma análise qualitativa e quantitativa do problema, embora, nesse contexto, aplicada a um caso simples é uma ferramenta poderosíssima no âmbito da engenharia do ponto de vista de produtividade e de custos envolvidos. 
