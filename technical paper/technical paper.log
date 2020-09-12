@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.10.30)  3 SEP 2020 22:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.10.30)  8 SEP 2020 17:15
 entering extended mode
 **"./technical paper.tex"
 ("technical paper.tex"
@@ -445,91 +445,91 @@ LaTeX Info: Redefining \nameref on input line 21.
  [1
 
 {C:/Users/Fernando Mendes/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 51.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 52.
 
 ("D:\Arquivos de Programas\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 51.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 52.
  [2]
 <fig/schematics.png, id=57, 861.2175pt x 170.6375pt>
 File: fig/schematics.png Graphic file (type png)
 <use fig/schematics.png>
-Package pdftex.def Info: fig/schematics.png  used on input line 99.
+Package pdftex.def Info: fig/schematics.png  used on input line 98.
 (pdftex.def)             Requested size: 281.85587pt x 55.84708pt.
 <fig/isometric_view.png, id=59, 611.28375pt x 351.56343pt>
 File: fig/isometric_view.png Graphic file (type png)
 <use fig/isometric_view.png>
-Package pdftex.def Info: fig/isometric_view.png  used on input line 106.
+Package pdftex.def Info: fig/isometric_view.png  used on input line 105.
 (pdftex.def)             Requested size: 234.8775pt x 135.08142pt.
 <fig/mesh.png, id=60, 523.9575pt x 319.1925pt>
 File: fig/mesh.png Graphic file (type png)
 <use fig/mesh.png>
-Package pdftex.def Info: fig/mesh.png  used on input line 113.
+Package pdftex.def Info: fig/mesh.png  used on input line 112.
 (pdftex.def)             Requested size: 234.8775pt x 143.08493pt.
  [3pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.117 
+l.116 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.117 
+l.116 
        <./fig/schematics.png> <./fig/isometric_view.png>]
 <fig/velocity_contour_turbulent.png, id=76, 661.72218pt x 260.47313pt>
 File: fig/velocity_contour_turbulent.png Graphic file (type png)
 <use fig/velocity_contour_turbulent.png>
 Package pdftex.def Info: fig/velocity_contour_turbulent.png  used on input line
- 136.
+ 135.
 (pdftex.def)             Requested size: 234.8775pt x 92.4547pt.
 <fig/pressure_contour_turbulent.png, id=77, 661.72218pt x 262.73157pt>
 File: fig/pressure_contour_turbulent.png Graphic file (type png)
 <use fig/pressure_contour_turbulent.png>
 Package pdftex.def Info: fig/pressure_contour_turbulent.png  used on input line
- 143.
+ 142.
 (pdftex.def)             Requested size: 234.8775pt x 93.25632pt.
 <fig/velocity_profile_turbulent.png, id=78, 649.67719pt x 423.08063pt>
 File: fig/velocity_profile_turbulent.png Graphic file (type png)
 <use fig/velocity_profile_turbulent.png>
 Package pdftex.def Info: fig/velocity_profile_turbulent.png  used on input line
- 150.
+ 149.
 (pdftex.def)             Requested size: 234.8775pt x 152.95447pt.
  [4pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.154 
+l.153 
       pdfTeX warning (ext4): destination with the same identifier (name{table.1
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.154 
+l.153 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.154 
+l.153 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.154 
+l.153 
        <./fig/mesh.png> <./fig/velocity_contour_turbulent.png> <./fig/pressure_
 contour_turbulent.png>]
 <fig/pressure_loss_turbulent.png, id=90, 647.41875pt x 427.5975pt>
 File: fig/pressure_loss_turbulent.png Graphic file (type png)
 <use fig/pressure_loss_turbulent.png>
 Package pdftex.def Info: fig/pressure_loss_turbulent.png  used on input line 15
-7.
+6.
 (pdftex.def)             Requested size: 234.8775pt x 155.12898pt.
  ("technical paper.bbl" [5pdfTeX warning (ext4): destination with the same iden
 tifier (name{figure.6}) has been already used, duplicate ignored
@@ -577,19 +577,19 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 172.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 170.
  [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 172.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 170.
  ("technical paper.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 172.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 172.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 170.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 170.
 Package rerunfilecheck Info: File `"technical paper".out' has not changed.
 (rerunfilecheck)             Checksum: 31EE978EBCD3F5D973849656AD89096D;440.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 172.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 170.
  ) 
 Here is how much of TeX's memory you used:
  7199 strings out of 492895
@@ -610,7 +610,7 @@ D:/Arquivos de Programas/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><D
 Arquivos de Programas/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/
 Arquivos de Programas/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/A
 rquivos de Programas/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "technical paper.pdf" (6 pages, 275614 bytes).
+Output written on "technical paper.pdf" (6 pages, 275590 bytes).
 PDF statistics:
  150 PDF objects out of 1000 (max. 8388607)
  28 named destinations out of 1000 (max. 500000)
