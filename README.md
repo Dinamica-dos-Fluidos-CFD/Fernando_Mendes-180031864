@@ -55,17 +55,17 @@ O pré-processamento foi realizado de duas formas: laminar e turbulento. No cont
   <a id="fig-blood"></a>
   <img width="350" height="170" src="fig/blood.png">
 </p>
-<p align=center><b>Figura 7 - Configuração do sangue</b></p>
+<p align=center><b>Figura 6 - Configuração do sangue</b></p>
 A velocidade média de escoamento de sangue nessa região da aorta para pacientes homens entre 21 e 30 anos é de 0.65 m/s.
 
 ### Pós-processamento
-Por fim, o contorno da pressão estática ilustrado pela <a href="#fig-aorta2">Fig. 8</a> apresenta comportamento dentro do esperado para a situação simulada.
+Por fim, o contorno da pressão estática ilustrado pela <a href="#fig-aorta2">Fig. 7</a> apresenta comportamento dentro do esperado para a situação simulada.
 
 <p align="center">
   <a id="fig-aorta2"></a>
   <img width="360" height="140" src="fig/aorta2.png">
 </p>
-<p align=center><b>Figura 8 - Uso do Virtual Topology</b></p>
+<p align=center><b>Figura 7 - Uso do Virtual Topology</b></p>
 
 ### Conclusão
 Logo, conclui-se que o paciente cuja aorta foi usada na simulação é um paciente saudável, pois não foi observado comportamento turbulento nas simulações e os resultados laminar e turbulento não diferiram de valores significativos. Além disso, a principal dificuldade da simulação está em tratar a geometria para ter o detalhamento necessário, mas sem conter elementos de malha muito deformados.
