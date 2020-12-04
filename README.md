@@ -1,3 +1,75 @@
+# Desafio Aorta
+O desafio consiste em simular o escoamento numa geometria de aorta retirada de exames reais de um paciente por meio do ecocardiograma.
+
+### Geometria
+O arquivo da geometria foi fornecido pelo professor em formato STL e, utilizando as ferramentas do SpaceClaim, a geometria foi tratada para reduzir o detalhamento e a complexidade em pontos desnecessários.
+
+<p align="center">
+  <a id="fig-schematics"></a>
+  <img width="250" height="115" src="fig/aorta1.png">
+</p>
+<p align=center><b>Figura 1 - Esquemático da geometria</b></p>
+<p align="center">
+  <a id="fig-schematics"></a>
+  <img width="120" height="90" src="fig/aortaedit.png">
+</p>
+<p align=center><b>Figura 2 - Menu da opção Reduce no SpaceClaim</b></p>
+
+Primeiro foi utilizada a função Reduce ilustrada na  <a href="#fig-reduce">Fig. 2</a> para reduzir o número de Facets e, após transformar a geometria em sólido, a função Merge Faces foi usada para tornar as entradas e saídas da geometria em um faces únicas.
+
+
+<p align="center">
+  <a id="fig-reduce"></a>
+  <img width="180" height="80" src="fig/aortaedit2.png">
+</p>
+<p align=center><b>Figura 3 - Menu da opção Merge Faces no SpaceClaim</b></p>
+
+###Malha
+A malha de cálculo foi construída usando a ferramenta Virtual Topology e com elemento de malha de tamanho de 1 mm. 
+<p align="center">
+  <a id="fig-reduce"></a>
+  <img width="300" height="140" src="fig/aortamesh.png">
+</p>
+<p align=center><b>Figura 4 - Malha de cálculo</b></p>
+
+<p align="center">
+  <a id="fig-reduce"></a>
+  <img width="300" height="140" src="fig/aortamesh2.png">
+</p>
+<p align=center><b>Figura 5 - Uso do Virtual Topology</b></p>
+
+Desse modo, as estatísticas da malha:
+
+| Propriedade | Valor  |
+| ----------- | -----  |
+| N° de nós   | 68681  | 
+| N° de elementos | 337853 |
+| Skewness Máx | 0,99493 |
+| Skewness Méd | 0,23614 |
+| Orthogonal Quality Máx | 0,99492 |
+| Orthogonal Quality Méd | 0,76244 |
+
+### Pré-processamento
+O pré-processamento foi realizado de duas formas: laminar e turbulento. No contexto de um paciente saudável, é esperado que o escoamento do sangue nas artérias seja laminar, pois o comportamento turbulento é característico de paciente com alguma enfermidade. Portanto, como fluido foi utilizado o sangue por meio da alteração das propriedades da água conforme a <a href="#fig-blood">Fig. 6</a>.
+<p align="center">
+  <a id="fig-blood"></a>
+  <img width="300" height="140" src="fig/blood.png">
+</p>
+<p align=center><b>Figura 7 - Configuração do sangue</b></p>
+A velocidade média de escoamento de sangue nessa região da aorta para pacientes homens entre 21 e 30 anos é de 0.65 m/s.
+
+### Pós-processamento
+Por fim, o contorno da pressão estática ilustrado pela <a href="#fig-aorta2">Fig. 8</a> apresenta comportamento dentro do esperado para a situação simulada.
+
+<p align="center">
+  <a id="fig-aorta2"></a>
+  <img width="360" height="140" src="fig/aorta2.png">
+</p>
+<p align=center><b>Figura 8 - Uso do Virtual Topology</b></p>
+
+### Conclusão
+Logo, conclui-se que o paciente cuja aorta foi usada na simulação é um paciente saudável, pois não foi observado comportamento turbulento nas simulações e os resultados laminar e turbulento não diferiram de valores significativos. Além disso, a principal dificuldade da simulação está em tratar a geometria para ter o detalhamento necessário, mas sem conter elementos de malha muito deformados.
+
 # Fernando_Mendes-180031864 - TRABALHO ENCERRADO
 Problema 1 - Substituir a nota do laboratório
 
