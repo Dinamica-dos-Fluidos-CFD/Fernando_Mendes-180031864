@@ -6,7 +6,7 @@ O arquivo da geometria foi fornecido pelo professor em formato STL e, utilizando
 
 <p align="center">
   <a id="fig-schematics"></a>
-  <img width="250" height="115" src="fig/aorta1.png">
+  <img width="350" height="185" src="fig/aorta1.png">
 </p>
 <p align=center><b>Figura 1 - Esquemático da geometria</b></p>
 <p align="center">
@@ -53,7 +53,7 @@ Desse modo, as estatísticas da malha:
 O pré-processamento foi realizado de duas formas: laminar e turbulento. No contexto de um paciente saudável, é esperado que o escoamento do sangue nas artérias seja laminar, pois o comportamento turbulento é característico de paciente com alguma enfermidade. Portanto, como fluido foi utilizado o sangue por meio da alteração das propriedades da água conforme a <a href="#fig-blood">Fig. 6</a>.
 <p align="center">
   <a id="fig-blood"></a>
-  <img width="300" height="140" src="fig/blood.png">
+  <img width="350" height="170" src="fig/blood.png">
 </p>
 <p align=center><b>Figura 7 - Configuração do sangue</b></p>
 A velocidade média de escoamento de sangue nessa região da aorta para pacientes homens entre 21 e 30 anos é de 0.65 m/s.
